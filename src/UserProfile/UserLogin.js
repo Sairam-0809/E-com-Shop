@@ -40,7 +40,7 @@ const navigate=useNavigate()
 
 const handleLogin = async () => {
   try {
-    const res = await axios.post('https://e-back-5zf8.onrender.com/api/login', { email, password });
+    const res = await axios.post('https://ecartbackend-qtwf.onrender.com/api/register', { email, password });
 
     console.log(res.data, "User Logged In Data");
 
