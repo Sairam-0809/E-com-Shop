@@ -9,7 +9,7 @@ import { UseCart } from "../stores/context/cartContext";
 function MensSingle(){
 const {id}=useParams();
 
-const{addToCart,cartItems}=UseCart()
+const{addToCart}=UseCart()
 
 
 const product=menData.find((item)=>item.id===id);

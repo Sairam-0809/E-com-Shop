@@ -8,7 +8,7 @@ import Footer from "../stores/Components/Footer";
 function MobileSingle(){
 const {id}=useParams();
 
-const{addToCart,cartItems}=UseCart()
+const{addToCart}=UseCart()
 
 const product=mobileData.find((item)=>item.id===id);
 

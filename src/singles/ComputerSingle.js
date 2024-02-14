@@ -8,7 +8,7 @@ import { UseCart } from "../stores/context/cartContext";
 
 function ComputerSingle(){
 const {id}=useParams();
-const{addToCart,cartItems}=UseCart()
+const{addToCart}=UseCart()
 
 
 const product=computerData.find((item)=>item.id===id);

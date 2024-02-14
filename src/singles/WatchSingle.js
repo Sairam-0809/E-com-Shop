@@ -9,7 +9,7 @@ import { UseCart } from "../stores/context/cartContext";
 function WatchSingle(){
 const {id}=useParams();
 
-const{addToCart,cartItems}=UseCart()
+const{addToCart}=UseCart()
 
 
 const product=watchData.find((item)=>item.id===id);

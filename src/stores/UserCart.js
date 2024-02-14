@@ -111,10 +111,10 @@
 
 import React from "react";
 import { UseCart } from "./context/cartContext";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function UserCart() {
-  const { cartItems, addToCart, removeFromCart, IncreaseCart } = UseCart();
+  const { cartItems, removeFromCart, IncreaseCart } = UseCart();
   const navigate = useNavigate();
 
   // Calculate total price

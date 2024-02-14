@@ -1,10 +1,10 @@
 import { computerData } from "../data/computers";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Computers(){
 const firstFiveImage=computerData.slice(0,5);
 
-const {id} =useParams();
+// const {id} =useParams();
     return (
 
 
