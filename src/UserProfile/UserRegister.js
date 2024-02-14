@@ -9,28 +9,30 @@ const UserRegister = () => {
      
     const navigate=useNavigate()
 
-   const handleRegister=()=>{
-    try{
-      const res=axios.post('https://ecartbackend-qtwf.onrender.com/api/register',{email,password,firstname,lastname})
-        .then((res)=>{
-            console.log(res.data,"User Registered Data")
-            if(res.data.msg==="Email Already Exist"){
-               alert(res.data.msg)
-            }
-            else{
-                localStorage.setItem("token",res.data.token)
-                setTimeout(async() => {
-                  alert("user Registered successfully")
-                  await  navigate('/user/login')
-                }, 2000);
-            }
-        })
-        console.log((res.data,"response data"));
-    }
-    catch(err){
-        console.log(err,"Registration failed");
-    }
-   }
+    
+
+    const handleRegister=()=>{
+      try{
+        const res=axios.post('https://ecartbackend-qtwf.onrender.com/api/register',{email,password,firstname,lastname})
+          .then((res)=>{
+              console.log(res.data,"User Registered Data")
+              if(res.data.msg==="Email Already Exist"){
+                 alert(res.data.msg)
+              }
+              else{
+                  localStorage.setItem("token",res.data.token)
+                  setTimeout(async() => {
+                    alert("user Registered successfully")
+                    await  navigate('/user/login')
+                  }, 2000);
+              }
+          })
+          console.log((res.data,"response data"));
+      }
+      catch(err){
+          console.log(err,"Registration failed");
+      }
+     }
 
   return (
     <div className='RegisterWrapper'>
