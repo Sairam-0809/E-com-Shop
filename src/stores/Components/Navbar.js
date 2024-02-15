@@ -61,7 +61,7 @@
     <div className="user">
 
     <div className="user-detail">
-    <p style={{cursor:"pointer"}}    onClick={()=>navigate('/user/login')}>{search?"Login":"Logout"}</p> 
+    <p style={{cursor:"pointer"}}    onClick={()=>navigate('/user/login')}>{search?"Logout":"Login"}</p> 
       <p  style={{cursor:"pointer"}}    onClick={()=>navigate('/user/register')}>Register</p> 
       
     {search?<span>Sai</span>:null}
