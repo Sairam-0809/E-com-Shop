@@ -26,16 +26,16 @@
       }, [setCartItems]);
     
 
-    const handleLogout = () => {
-        // Implement your logout logic here
+    // const handleLogout = () => {
+    //     // Implement your logout logic here
     
-        // Set cart items to 0 on logout
-        setCartItems([]);
+    //     // Set cart items to 0 on logout
+    //     setCartItems([]);
     
-        // After logout, you can redirect the user to the login page or any other desired page.
-        // For now, let's just navigate to the login page
-        navigate('/user/login');
-      };
+    //     // After logout, you can redirect the user to the login page or any other desired page.
+    //     // For now, let's just navigate to the login page
+    //     navigate('/user/login');
+    //   };
 
 
     // const {cartItems }= UserCart();

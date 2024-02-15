@@ -181,7 +181,7 @@
 // export default UserCart;
 
 
-import React, { useState } from "react";
+import React from "react";
 import { UseCart } from "./context/cartContext"; // Assuming `UseCart` is a custom hook or context for managing cart state
 import { useNavigate } from "react-router-dom";
 
