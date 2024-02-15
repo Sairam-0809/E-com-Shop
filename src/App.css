@@ -1048,11 +1048,12 @@ height: 10px;
   }
   .total-price-container {
     margin-top: 20px;
-    padding: 10px;
+    padding: 8px;
     background-color: #b9b4b4;
     border: 1px solid #ddd;
     border-radius: 5px;
     text-align: right;
+    margin-right:15px;
   }
   
   .total-price-container p {
@@ -1087,4 +1088,82 @@ height: 10px;
   margin-left: 220px;
   overflow: hidden; /* Hide overflow content */
 }
-  
+  /* ThankYouMessage.css */
+
+/* Style for the container */
+.message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background:linear-gradient(135deg,violet,#3498db,#2ecc71);
+  margin: 20px;
+}
+
+/* Style for the heading */
+ .message h2 {
+  color: #333;
+}
+
+/* Style for the paragraphs */
+.message p {
+  color: #555;
+  margin: 10px 0;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 600px) {
+  div {
+    margin: 10px;
+  }
+}
+.goHome{
+
+  background:linear-gradient(45deg,#3458db,#3498db);
+  text-align: center;
+  justify-content: center;
+
+}
+.goHome {
+  background: linear-gradient(45deg, #3458db, #3498db);
+  color: #ffffff; /* Text color */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 20px auto; /* Center horizontally */
+}
+
+.goHome:hover {
+  background: linear-gradient(45deg, #1f3a93, #1f7f93); /* Adjust hover color if needed */
+}
+@media only screen and (max-width: 768px) {
+  .ind-page {
+    padding: 10px;
+  }
+
+  .ind-img img {
+    width: 100%;
+  }
+}
+
+/* Styling for footer */
+.footer {
+  /* Add your footer styling here */
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}

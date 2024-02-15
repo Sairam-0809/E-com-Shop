@@ -20,6 +20,7 @@ import UserCart from "./stores/UserCart";
 import UserForm from "./UserProfile/UserForm";
 import UserRegister from "./UserProfile/UserRegister";
 import UserLogin from "./UserProfile/UserLogin"
+import ThankYouMessage from "./stores/Components/ThankYouMessage";
 
 function App(){
 
@@ -52,6 +53,7 @@ function App(){
           <Route path="/user/register" element={<UserRegister />} />
           <Route path="/user/login" element={<UserLogin />} />
           </Route >
+          <Route path='/success' element={<ThankYouMessage/>} />
 
         
     </Routes>
