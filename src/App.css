@@ -1162,7 +1162,7 @@ height: 10px;
   text-align: center;
   padding: 10px;
 } */
-@media only screen and (max-width: 1024px) {
+@media only screen and (min-width: 810px) {
   
     .footer {
       width: 100%;
@@ -1173,7 +1173,7 @@ height: 10px;
       justify-content: space-around;
       cursor: pointer;
       flex-wrap: wrap;
-      margin-top: 36.5rem;
+      margin-top: 25.6rem;
 
   }
 }
