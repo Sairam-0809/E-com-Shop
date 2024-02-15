@@ -163,6 +163,7 @@ body {
     width: 30%;
     border: 1px solid black;
     margin-right: 20px;
+    margin-top: 8.1rem;
 }
 
 .pro-selected {
@@ -1115,12 +1116,7 @@ height: 10px;
   margin: 10px 0;
 }
 
-/* Responsive styles */
-@media screen and (max-width: 600px) {
-  div {
-    margin: 10px;
-  }
-}
+
 .goHome{
 
   background:linear-gradient(45deg,#3458db,#3498db);
@@ -1156,9 +1152,8 @@ height: 10px;
   }
 }
 
-/* Styling for footer */
-.footer {
-  /* Add your footer styling here */
+/* .footer {
+  
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -1166,4 +1161,34 @@ height: 10px;
   color: #fff;
   text-align: center;
   padding: 10px;
+} */
+@media only screen and (max-width: 1024px) {
+  
+    .footer {
+      width: 100%;
+      background-color: #333;
+      color: white;
+      padding: 20px 0;
+      display: flex;
+      justify-content: space-around;
+      cursor: pointer;
+      flex-wrap: wrap;
+      margin-top: 36.5rem;
+
+  }
+}
+@media only screen and ( min-width:374px) and ( max-width:500px) {
+  
+  .footer {
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-around;
+    cursor: pointer;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+
+}
 }
