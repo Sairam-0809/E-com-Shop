@@ -5,11 +5,11 @@
     import {Link, NavLink, useNavigate} from "react-router-dom";
     import { useEffect } from "react";
     function Navbar(){
-    const[search,setSearch]=useState(false);
+    
     const { cartItems, setCartItems } = UseCart();
 
     // const {cartItems}=UseCart();
-
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
     const navigate=useNavigate();
 
     useEffect(() => {
@@ -20,28 +20,30 @@
             const parsedItems = JSON.parse(storedItems);
             setCartItems(parsedItems);
           }
+        
         };
     
         fetchCartItems();
       }, [setCartItems]);
+
+      useEffect(()=>{
+        
+        {isLoggedIn? navigate('/user/login'):navigate('/')}
+
+
+      });
+
+      const handleToggle=()=>{
+        
+        // navigate(isLoggedIn ? '/' : '/user/login');
+        setIsLoggedIn(!isLoggedIn);
+      }
     
 
-    // const handleLogout = () => {
-    //     // Implement your logout logic here
-    
-    //     // Set cart items to 0 on logout
-    //     setCartItems([]);
-    
-    //     // After logout, you can redirect the user to the login page or any other desired page.
-    //     // For now, let's just navigate to the login page
-    //     navigate('/user/login');
-    //   };
 
 
-    // const {cartItems }= UserCart();
+console.log(isLoggedIn);
 
-
-    // console.log(search.toLocaleLowerCase());
         return (
             <>
         <div className="navSection">
@@ -54,17 +56,19 @@
 
 
     <div className="search">
-    <input type="text" placeholder="enter the product" className="input"  onChange={(e)=>{setSearch(!e.target.value)}} />
+    <input type="text" placeholder="enter the product" className="input" />
         
     </div>
 
     <div className="user">
 
     <div className="user-detail">
-    <p style={{cursor:"pointer"}}    onClick={()=>navigate('/user/login')}>{search?"Logout":"Login"}</p> 
-      <p  style={{cursor:"pointer"}}    onClick={()=>navigate('/user/register')}>Register</p> 
+    <p style={{cursor:"pointer"}} onClick={handleToggle} >{isLoggedIn?"Login":"Logout"}</p> 
+    <p style={{ cursor: "pointer" }} onClick={() => navigate("/user/register")}>
+            Register
+          </p>
+
       
-    {search?<span>Sai</span>:null}
     
 
         
@@ -102,4 +106,6 @@
     
     
     export default Navbar;
+    
+
     
