@@ -28,7 +28,7 @@
 
       useEffect(()=>{
         
-        {isLoggedIn? navigate('/user/login'):navigate('/')}
+        // {isLoggedIn? navigate('/user/login'):navigate('/')}
 
 
       });
@@ -36,6 +36,9 @@
       const handleToggle=()=>{
         
         // navigate(isLoggedIn ? '/' : '/user/login');
+        
+        // {isLoggedIn? navigate('/user/login'):navigate('/')}
+
         setIsLoggedIn(!isLoggedIn);
       }
     
@@ -64,6 +67,8 @@ console.log(isLoggedIn);
 
     <div className="user-detail">
     <p style={{cursor:"pointer"}} onClick={handleToggle} >{isLoggedIn?"Login":"Logout"}</p> 
+    {isLoggedIn? navigate('/user/login'):navigate('/')}
+
     <p style={{ cursor: "pointer" }} onClick={() => navigate("/user/register")}>
             Register
           </p>
